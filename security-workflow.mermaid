@@ -1,0 +1,25 @@
+flowchart TD
+    A[Review Request] --> B{Initial Triage}
+    B -->|High Risk| C[Priority Review]
+    B -->|Standard| D[Regular Review]
+    B -->|Low Risk| E[Basic Review]
+    
+    C --> F[Detailed Assessment]
+    D --> F
+    E --> G[Basic Assessment]
+    
+    F --> H{Findings}
+    G --> H
+    
+    H -->|Critical Issues| I[Immediate Action Required]
+    H -->|Standard Issues| J[Normal Remediation]
+    H -->|No Issues| K[Approval]
+    
+    I --> L[Track Remediation]
+    J --> L
+    L --> M{Verification}
+    
+    M -->|Pass| K
+    M -->|Fail| L
+    
+    K --> N[Close Review]
