@@ -1,0 +1,50 @@
+{{ $type := .Get "type" | default "default" }}
+
+<div class="workflow-diagram">
+    {{ if eq $type "default" }}
+    <div class="mermaid">
+        flowchart TD
+            A[Review Request] --> B{Initial Triage}
+            B -->|High Risk| C[Priority Review]
+            B -->|Standard| D[Regular Review]
+            B -->|Low Risk| E[Basic Review]
+            
+            C --> F[Detailed Assessment]
+            D --> F
+            E --> G[Basic Assessment]
+            
+            F --> H{Findings}
+            G --> H
+            
+            H -->|Critical Issues| I[Immediate Action Required]
+            H -->|Standard Issues| J[Normal Remediation]
+            H -->|No Issues| K[Approval]
+            
+            I --> L[Track Remediation]
+            J --> L
+            L --> M{Verification}
+            
+            M -->|Pass| K
+            M -->|Fail| L
+            
+            K --> N[Close Review]
+    </div>
+    {{ else if eq $type "simplified" }}
+    <div class="mermaid">
+        flowchart LR
+            A[Request] --> B[Review]
+            B --> C[Findings]
+            C --> D[Remediation]
+            D --> E[Approval]
+    </div>
+    {{ end }}
+</div>
+
+<style>
+.workflow-diagram {
+    background: var(--theme);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+</style>

@@ -1,0 +1,101 @@
+/* Custom styles for Security Review Framework */
+
+/* Workflow diagram customization */
+.workflow-diagram {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-radius: 8px;
+    background: var(--theme);
+}
+
+/* Custom buttons */
+.custom-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+    background: var(--primary);
+    color: var(--theme);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Custom callouts */
+.callout {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 4px solid var(--primary);
+    background: var(--entry);
+}
+
+.callout-warning {
+    border-color: #f0ad4e;
+}
+
+.callout-info {
+    border-color: #5bc0de;
+}
+
+.callout-success {
+    border-color: #5cb85c;
+}
+
+/* Custom table styles */
+table {
+    width: 100%;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+}
+
+th {
+    background: var(--entry);
+}
+
+/* Custom code block styling */
+pre {
+    padding: 1rem;
+    border-radius: 4px;
+    background: var(--entry);
+}
+
+/* Custom list styling */
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .workflow-diagram {
+        margin: 1rem 0;
+        padding: 0.5rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

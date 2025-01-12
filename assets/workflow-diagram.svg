@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa" rx="8"/>
+  
+  <!-- Workflow Steps -->
+  <!-- Request -->
+  <rect x="50" y="150" width="120" height="60" rx="8" fill="#4a9eff" />
+  <text x="110" y="185" text-anchor="middle" fill="white" font-family="Arial">Request</text>
+  
+  <!-- Triage -->
+  <rect x="240" y="150" width="120" height="60" rx="8" fill="#4a9eff"/>
+  <text x="300" y="185" text-anchor="middle" fill="white" font-family="Arial">Triage</text>
+  
+  <!-- Review -->
+  <rect x="430" y="150" width="120" height="60" rx="8" fill="#4a9eff"/>
+  <text x="490" y="185" text-anchor="middle" fill="white" font-family="Arial">Review</text>
+  
+  <!-- Remediation -->
+  <rect x="620" y="150" width="120" height="60" rx="8" fill="#4a9eff"/>
+  <text x="680" y="185" text-anchor="middle" fill="white" font-family="Arial">Remediation</text>
+  
+  <!-- Arrows -->
+  <path d="M170 180 L240 180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M360 180 L430 180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M550 180 L620 180" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrowhead Marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- Status Indicators -->
+  <circle cx="110" cy="230" r="8" fill="#2ecc71"/>
+  <circle cx="300" cy="230" r="8" fill="#2ecc71"/>
+  <circle cx="490" cy="230" r="8" fill="#f1c40f"/>
+  <circle cx="680" cy="230" r="8" fill="#e74c3c"/>
+  
+  <!-- Labels -->
+  <text x="110" y="250" text-anchor="middle" fill="#666" font-family="Arial" font-size="12">Complete</text>
+  <text x="300" y="250" text-anchor="middle" fill="#666" font-family="Arial" font-size="12">Complete</text>
+  <text x="490" y="250" text-anchor="middle" fill="#666" font-family="Arial" font-size="12">In Progress</text>
+  <text x="680" y="250" text-anchor="middle" fill="#666" font-family="Arial" font-size="12">Pending</text>
+</svg>

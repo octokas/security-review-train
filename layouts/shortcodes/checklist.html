@@ -1,0 +1,106 @@
+{{ $type := .Get "type" | default "general" }}
+
+<div class="security-checklist">
+    <div class="checklist-header">
+        {{ if eq $type "general" }}
+        <h4>General Security Controls</h4>
+        {{ else if eq $type "access" }}
+        <h4>Access Control Checklist</h4>
+        {{ else if eq $type "data" }}
+        <h4>Data Protection Controls</h4>
+        {{ end }}
+    </div>
+    
+    <div class="checklist-items">
+        {{ if eq $type "general" }}
+        <div class="checklist-item">
+            <input type="checkbox" id="gen1">
+            <label for="gen1">Authentication mechanisms implemented</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="gen2">
+            <label for="gen2">Authorization controls in place</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="gen3">
+            <label for="gen3">Logging and monitoring configured</label>
+        </div>
+        {{ else if eq $type "access" }}
+        <div class="checklist-item">
+            <input type="checkbox" id="acc1">
+            <label for="acc1">Multi-factor authentication enabled</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="acc2">
+            <label for="acc2">Password policies enforced</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="acc3">
+            <label for="acc3">Role-based access control implemented</label>
+        </div>
+        {{ else if eq $type "data" }}
+        <div class="checklist-item">
+            <input type="checkbox" id="data1">
+            <label for="data1">Data encryption at rest</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="data2">
+            <label for="data2">Data encryption in transit</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="data3">
+            <label for="data3">Data classification completed</label>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+.security-checklist {
+    background: var(--entry);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+}
+
+.checklist-header {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.checklist-header h4 {
+    margin: 0;
+    color: var(--primary);
+}
+
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background: var(--theme);
+}
+
+.checklist-item:hover {
+    background: var(--entry);
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.checklist-item label {
+    cursor: pointer;
+    user-select: none;
+}
+</style>
