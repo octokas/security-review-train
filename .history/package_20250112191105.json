@@ -1,0 +1,77 @@
+{
+  "name": "security-review-framework",
+  "version": "1.0.0",
+  "description": "Security Review Framework Documentation Site",
+  "author": "Security Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "hugo server -D",
+    "build": "hugo --minify",
+    "clean": "rimraf public resources",
+    "check": "npm-check -u",
+    "netlify:build": "npm run clean && hugo --gc --minify",
+    "start": "hugo server -D --disableFastRender",
+    "update:theme": "cd themes/PaperMod && git pull",
+    "test": "hugo check",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "postinstall": "husky install",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@netlify/plugin-lighthouse": "^5.0.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "npm-check": "^6.0.1",
+    "prettier": "^3.1.0",
+    "prettier-plugin-go-template": "^0.0.15",
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "overrides": [
+      {
+        "files": ["*.html"],
+        "options": {
+          "parser": "go-template"
+        }
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/security-review-framework"
+  },
+  "keywords": [
+    "hugo",
+    "papermod",
+    "security",
+    "documentation",
+    "netlify"
+  ]
+}
