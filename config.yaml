@@ -47,11 +47,11 @@ params:
     disableHLJS: true
     disableFingerprinting: true
 
-  homeInfoParams:
-    Title: "Smythe's SecSpec Framework 🔒"
-    Content: >
-      Welcome to Smythe's SecSpec Framework Docs.
-       - 🚀 Quick to implement - 💰 Cost-effective - 🔄 Easy to maintain - 🤝 Iterration-friendly - 🔒 Security-focused
+  # homeInfoParams:
+  #   Title: "Smythe's SecSpec Framework 🔒"
+  #   Content: >
+  #     Welcome to Smythe's SecSpec Framework Docs.
+  #      - 🚀 Quick to implement - 💰 Cost-effective - 🔄 Easy to maintain - 🤝 Iterration-friendly - 🔒 Security-focused
 
   socialIcons:
   - name: github
