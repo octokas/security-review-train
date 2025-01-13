@@ -1,34 +1,41 @@
 ---
-title: "Security Review Templates"
+title: "Your Security Review Templates"
 date: 2025-01-12
 draft: false
-description: "Collection of templates for security review process"
+description: "Your collection of templates for the security review process"
 tags: ["templates", "forms", "checklists"]
 weight: 3
 ---
 
-## Available Templates
+## Your Available Templates
 
-Our security review framework includes a comprehensive set of templates to streamline the review process.
+I've created a comprehensive set of templates to streamline your review process.
 
 ### Core Templates
 
-1. [Review Request Form](#review-request)
-2. [Findings Report Template](#findings-report)
-3. [Remediation Plan](#remediation-plan)
-4. [Security Controls Checklist](#controls-checklist)
+- [Your Available Templates](#your-available-templates)
+  - [Core Templates](#core-templates)
+  - [Review Request Form](#review-request-form)
+  - [Findings Report](#findings-report)
+  - [Remediation Plan](#remediation-plan)
+  - [Controls Checklist](#controls-checklist)
+- [Using Templates](#using-templates)
+- [Template Guidelines](#template-guidelines)
+  - [Do's](#dos)
+  - [Don'ts](#donts)
+- [Need Help?](#need-help)
 
 ### Review Request Form
 
-{{< details "Review Request Template" >}}
+{{< details "Your Review Request Template" >}}
 ```markdown
 # Security Review Request
 
 ## Project Information
 - Project Name:
-- Review ID: [AUTO-GENERATED]
+- Your Review ID: [AUTO-GENERATED]
 - Date Submitted:
-- Requested Completion:
+- Your Requested Completion:
 
 [...]
 ```

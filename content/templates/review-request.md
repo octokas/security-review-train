@@ -1,57 +1,57 @@
-# Security Review Request Template
+# Your Security Review Request
 
 ## Project Information
 
 ### Basic Details
-- **Project Name**: 
-- **Review ID**: [AUTO-GENERATED]
-- **Date Submitted**: [AUTO-GENERATED]
-- **Requested Completion Date**: 
+- **Your Project Name**:
+- **Your Review ID**: [I'll generate this]
+- **Date Submitted**: [Auto-generated]
+- **Your Target Completion**:
 
-### Contact Information
-- **Project Owner**: 
+### Your Contact Information
+- **Your Project Owner**:
   - Name:
   - Department:
   - Email:
   - Phone:
-- **Technical Lead**:
+- **Your Technical Lead**:
   - Name:
   - Email:
   - Phone:
 
-## Project Overview
+## Your Project Overview
 
 ### Description
-[Provide a brief description of the project, including its purpose and main functionality]
+[Describe your project, including its purpose and main functionality]
 
-### Business Impact
-- **Criticality Level**: [High/Medium/Low]
-- **Business Units Affected**:
-- **Number of Users**:
-- **Operating Hours**:
+### Your Business Impact
+- **Your Criticality Level**: [High/Medium/Low]
+- **Your Business Units Affected**:
+- **Your User Base Size**:
+- **Your Operating Hours**:
 
-## Technical Details
+## Your Technical Details
 
-### Architecture
-- **Hosting Environment**: [Cloud/On-Premise/Hybrid]
-- **Cloud Provider(s)** (if applicable):
+### Your Architecture
+- **Your Hosting Environment**: [Cloud/On-Premise/Hybrid]
+- **Your Cloud Provider(s)** (if applicable):
   - [ ] AWS
   - [ ] Azure
   - [ ] GCP
   - [ ] Other: ________
 
-### System Components
-- **Frontend Technologies**:
-- **Backend Technologies**:
-- **Databases**:
-- **Third-party Services**:
+### Your System Components
+- **Your Frontend Technologies**:
+- **Your Backend Technologies**:
+- **Your Databases**:
+- **Your Third-party Services**:
 
-### Integration Points
-[List all systems and services this project will integrate with]
+### Your Integration Points
+[List all systems and services your project will integrate with]
 
-## Data Handling
+## Your Data Handling
 
-### Data Classification
+### Your Data Classification
 - [ ] Public
 - [ ] Internal
 - [ ] Confidential

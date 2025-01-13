@@ -102,7 +102,7 @@ Required Netlify environment variables:
 
 ## 🤝 Contributing
 
-1. Fork the repository
+1. Fork the repository at https://github.com/octokas/security-sleuth-smythe
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request

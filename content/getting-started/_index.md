@@ -2,30 +2,30 @@
 title: "Getting Started"
 date: 2025-01-12
 draft: false
-description: "Quick start guide for implementing the security review framework"
+description: "Quick start guide for implementing your security review framework"
 tags: ["guide", "setup", "implementation"]
 weight: 1
 ---
 
-## Quick Start Guide
+## Your Quick Start Guide
 
-This guide will help you implement the security review framework in your organization. Follow these steps to get started quickly while ensuring a solid foundation for your security review process.
+Hi Smythe! I've created this guide to help you implement the security review framework. Let's get you started quickly while ensuring a solid foundation for your security review process.
 
 ### Prerequisites
 
 Before beginning implementation, ensure you have:
 
-- [ ] Access to Jira or similar project management tool
-- [ ] GitHub/GitLab repository access
-- [ ] SharePoint or document management system
-- [ ] Team communication platform (Teams/Slack)
+- [ ] Your access to Jira or similar project management tool
+- [ ] Your access to GitHub/GitLab repository
+- [ ] Your access to SharePoint or document management system
+- [ ] Your access to Team communication platform (Teams/Slack)
 
 ### Step 1: Initial Setup
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/security-review-framework
-cd security-review-framework
+# I've prepared everything in this repository for you
+git clone https://github.com/octokas/security-sleuth-smythe
+cd security-sleuth-smythe
 
 # Run setup script
 ./scripts/setup.sh
@@ -34,13 +34,13 @@ cd security-review-framework
 cp .env.example .env
 ```
 
-### Step 2: Tool Configuration
+### Step 2: Your Tool Configuration
 
 1. **Jira Setup**
-   - Create dedicated project
-   - Import workflow templates
-   - Configure custom fields
-   - Set up dashboards
+   - Let's create your dedicated project
+   - I'll help import workflow templates
+   - We'll configure your custom fields
+   - Set up your dashboards
 
 2. **Document Repository**
    - Initialize SharePoint structure

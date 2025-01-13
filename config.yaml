@@ -17,11 +17,11 @@ minify:
 
 params:
   env: production
-  title: Security Review Framework
-  description: "A comprehensive security review framework for enterprise organizations"
-  keywords: [Blog, Portfolio, Security, Review]
-  author: Security Team
-  DateFormat: "January 2, 2006"
+  title: Smythe's Security Review Framework
+  description: "A personalized security review framework for Smythe's implementation at GA Power"
+  keywords: [ Security, Review, Framework, Guide ]
+  author: "Kaska Miskolczi, Security Consultant"
+  DateFormat: "January 13, 2025"
   defaultTheme: auto
   disableThemeToggle: false
 
@@ -48,17 +48,12 @@ params:
   homeInfoParams:
     Title: "Security Review Framework 🔒"
     Content: >
-      Welcome to the Security Review Framework documentation site.
-      
-      - 🚀 Quick to implement
-      - 💰 Cost-effective
-      - 🔄 Easy to maintain
-      - 🤝 Team-friendly
-      - 🔒 Security-focused
+      Welcome to Your Custom Security Review Framework Documentation Site.
+       - 🚀 Quick to implement - 💰 Cost-effective - 🔄 Easy to maintain - 🤝 Iterration-friendly - 🔒 Security-focused
 
   socialIcons:
-    - name: github
-      url: "https://github.com/octokas/security-review-train"
+  - name: github
+    url: "https://github.com/octokas/security-sleuth-smythe"
 
   cover:
     hidden: false
@@ -67,23 +62,23 @@ params:
 
 menu:
   main:
-    - identifier: getting-started
-      name: Getting Started
-      url: /getting-started/
-      weight: 10
-    - identifier: process
-      name: Process Guide
-      url: /process/
-      weight: 20
-    - identifier: templates
-      name: Templates
-      url: /templates/
-      weight: 30
-    - identifier: tools
-      name: Tools
-      url: /tools/
-      weight: 40
-    - identifier: search
-      name: Search
-      url: /search/
-      weight: 50
+  - identifier: getting-started
+    name: Getting Started
+    url: /getting-started/
+    weight: 10
+  - identifier: process
+    name: Process Guide
+    url: /process/
+    weight: 20
+  - identifier: templates
+    name: Templates
+    url: /templates/
+    weight: 30
+  - identifier: tools
+    name: Tools
+    url: /tools/
+    weight: 40
+  - identifier: search
+    name: Search
+    url: /search/
+    weight: 50
