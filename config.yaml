@@ -1,5 +1,5 @@
 baseURL: "https://security-sleuth-smythe.netlify.app/"
-title: "Smythe's SecSpec Framework"
+title: "Smythe's SecSpec"
 theme: PaperMod
 
 # Replace deprecated 'paginate' with new 'pagination' structure
@@ -47,11 +47,10 @@ params:
     disableHLJS: true
     disableFingerprinting: true
 
-  # homeInfoParams:
-  #   Title: "Smythe's SecSpec Framework 🔒"
-  #   Content: >
-  #     Welcome to Smythe's SecSpec Framework Docs.
-  #      - 🚀 Quick to implement - 💰 Cost-effective - 🔄 Easy to maintain - 🤝 Iterration-friendly - 🔒 Security-focused
+  homeInfoParams:
+    Title: "Howdy Smythe! 👋🏼"
+    Content: >
+      I'm working on a SecSpec Framework Guide for you, that will help you get started building your security review policies and processes, to ensure a solid foundation for your security team. 🤓
 
   socialIcons:
   - name: github
