@@ -10,4 +10,4 @@ tags: ["security", "framework", "documentation"]
 
 Welcome to your very own SecSpec "Security Review" Framework! :tada:
 
-I'm working on a SecSpec "Security Review" Framework for you, that will help you get started quickly while ensuring a solid foundation for your security review process.
+I'm working on a SecSpec "Security Review" Framework for you, that will help you get started building your security review policies and processes, to ensure a solid foundation for your security team.
