@@ -1,5 +1,5 @@
 baseURL: "https://security-sleuth-smythe.netlify.app/"
-title: "Security Review Framework"
+title: "Smythe's Security Review Framework"
 theme: PaperMod
 
 # Replace deprecated 'paginate' with new 'pagination' structure
@@ -46,9 +46,9 @@ params:
     disableFingerprinting: true
 
   homeInfoParams:
-    Title: "Security Review Framework 🔒"
+    Title: "Smythe's Security Review Framework 🔒"
     Content: >
-      Welcome to Your Custom Security Review Framework Documentation Site.
+      Welcome to Smythe's Security Review Framework Documentation Site.
        - 🚀 Quick to implement - 💰 Cost-effective - 🔄 Easy to maintain - 🤝 Iterration-friendly - 🔒 Security-focused
 
   socialIcons:
