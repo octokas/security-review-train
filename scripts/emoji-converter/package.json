@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Converts emoji shortcodes to actual emojis in Markdown files",
   "scripts": {
-    "watch": "node scripts/emoji-converter.js"
+    "watch": "node index.js"
   },
   "dependencies": {
     "chokidar": "^3.5.3",
