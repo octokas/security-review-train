@@ -22,7 +22,7 @@ params:
   title: Smythe's SecSpec Framework
   description: "A personalized security review framework for Smythe's implementation at GA Power"
   keywords: [ Security, Review, Framework, Guide ]
-  author: "Kaska Miskolczi, Security Consultant"
+  author: "Kaska, SecSpec Guru"
   DateFormat: "January 13, 2025"
   defaultTheme: auto
   disableThemeToggle: false
