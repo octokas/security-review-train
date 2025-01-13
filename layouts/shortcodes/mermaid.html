@@ -1,0 +1,97 @@
+{{ $id := delimit (shuffle (seq 1 9)) "" }}
+{{ $theme := .Get "theme" | default "default" }}
+{{ $width := .Get "width" | default "100%" }}
+{{ $height := .Get "height" | default "auto" }}
+
+<div class="mermaid-wrapper" style="width: {{ $width }}; height: {{ $height }};">
+    <pre class="mermaid" 
+         id="mermaid-{{ $id }}"
+         data-theme="{{ $theme }}"
+    >
+        {{- .Inner -}}
+    </pre>
+</div>
+
+<style>
+.mermaid-wrapper {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--entry);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .mermaid-wrapper {
+    background: var(--entry);
+}
+
+/* Loading state */
+.mermaid-wrapper::before {
+    content: "Loading diagram...";
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.mermaid-wrapper.loaded::before {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mermaid-wrapper {
+        overflow-x: auto;
+        padding: 0.5rem;
+    }
+}
+
+/* Error state */
+.mermaid-error {
+    color: #ef4444;
+    padding: 1rem;
+    border: 1px solid #ef4444;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Mermaid with theme configuration
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: '{{ $theme }}',
+        securityLevel: 'loose',
+        themeVariables: {
+            // Light theme variables
+            primaryColor: '#4a9eff',
+            primaryTextColor: '#fff',
+            primaryBorderColor: '#346dbe',
+            lineColor: '#666',
+            secondaryColor: '#f4f4f4',
+            tertiaryColor: '#fff',
+        },
+        darkMode: document.documentElement.getAttribute('data-theme') === 'dark',
+    });
+
+    // Add loaded class once diagram is rendered
+    mermaid.init(undefined, `.mermaid`).then(() => {
+        document.querySelectorAll('.mermaid-wrapper').forEach(wrapper => {
+            wrapper.classList.add('loaded');
+        });
+    }).catch(error => {
+        console.error('Mermaid initialization error:', error);
+        // Show error message in wrapper
+        document.querySelectorAll('.mermaid-wrapper').forEach(wrapper => {
+            wrapper.innerHTML = `
+                <div class="mermaid-error">
+                    Error rendering diagram. Please check your syntax.
+                </div>
+            `;
+        });
+    });
+});
+</script>
