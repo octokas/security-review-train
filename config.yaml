@@ -1,5 +1,5 @@
 baseURL: "https://security-sleuth-smythe.netlify.app/"
-title: "Smythe's Security Review Framework"
+title: "Smythe's SecSpec Framework"
 theme: PaperMod
 
 # Replace deprecated 'paginate' with new 'pagination' structure
@@ -19,7 +19,7 @@ minify:
 
 params:
   env: production
-  title: Smythe's Security Review Framework
+  title: Smythe's SecSpec Framework
   description: "A personalized security review framework for Smythe's implementation at GA Power"
   keywords: [ Security, Review, Framework, Guide ]
   author: "Kaska Miskolczi, Security Consultant"
@@ -48,9 +48,9 @@ params:
     disableFingerprinting: true
 
   homeInfoParams:
-    Title: "Smythe's Security Review Framework 🔒"
+    Title: "Smythe's SecSpec Framework 🔒"
     Content: >
-      Welcome to Smythe's Security Review Framework Documentation Site.
+      Welcome to Smythe's SecSpec Framework Docs.
        - 🚀 Quick to implement - 💰 Cost-effective - 🔄 Easy to maintain - 🤝 Iterration-friendly - 🔒 Security-focused
 
   socialIcons:

@@ -1,5 +1,5 @@
 ---
-title: "Your Security Review Templates"
+title: "Your SecSpec Templates"
 date: 2025-01-12
 draft: false
 description: "Your collection of templates for the security review process"

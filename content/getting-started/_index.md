@@ -7,9 +7,9 @@ tags: ["guide", "setup", "implementation"]
 weight: 1
 ---
 
-## Your Quick Start Guide
+## Your SecSpec Quick Start Guide
 
-Hi Smythe! I've created this guide to help you implement the security review framework. Let's get you started quickly while ensuring a solid foundation for your security review process.
+Hi Smythe! I've created this guide to help you implement the SecSpec "security review" framework. Let's get you started quickly while ensuring a solid foundation for your security review process.
 
 ### Prerequisites
 

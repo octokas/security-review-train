@@ -1,5 +1,5 @@
 ---
-title: "Security Review Framework"
+title: "Smythe's SecSpec Framework"
 date: 2025-01-12
 draft: false
 description: "A personalized security review framework for Smythe"
@@ -8,7 +8,7 @@ tags: ["security", "framework", "documentation"]
 
 ## Howdy Smythe! 👋
 
-Welcome to your very own Security Review Framework. :tada:
+Welcome to your very own SecSpec "Security Review" Framework! :tada:
 
 I've created this framework to provide you with a complete solution for implementing and managing security reviews. My approach focuses on practical, cost-effective implementation using existing tools and industry best practices.
 

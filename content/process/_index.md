@@ -1,5 +1,5 @@
 ---
-title: "Security Review Process Guide"
+title: "SecSpec Process Guide"
 date: 2025-01-12
 draft: false
 description: "Comprehensive guide to the security review process"
@@ -7,9 +7,9 @@ tags: ["process", "workflow", "guide"]
 weight: 2
 ---
 
-## Security Review Process Overview
+## SecSpec Process Overview
 
-Our security review process is designed to be thorough yet efficient, ensuring comprehensive coverage while maintaining reasonable timelines.
+This SecSpec process is designed to be thorough yet efficient, ensuring comprehensive coverage while maintaining reasonable timelines.
 
 ### Process Workflow
 

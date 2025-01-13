@@ -1,4 +1,4 @@
-# Smythe's Security Review Framework
+# Smythe's SecSpec Framework
 A personalized guide for implementing security review processes
 
 This documentation site is built with Hugo and deployed on Netlify, providing you with a comprehensive framework for managing security reviews.

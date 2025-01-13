@@ -1,7 +1,7 @@
 {
   "name": "security-sleuth-smythe",
   "version": "1.0.0",
-  "description": "Security Review Framework for Smythe",
+  "description": "SecSpec Framework for Smythe",
   "scripts": {
     "emoji:install": "cd scripts/emoji-converter && yarn install",
     "emoji:watch": "cd scripts/emoji-converter && yarn watch",
