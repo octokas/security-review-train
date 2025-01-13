@@ -6,7 +6,7 @@ description: "A personalized security review framework for Smythe"
 tags: ["security", "framework", "documentation"]
 ---
 
-## Welcome Smythe! 👋
+## Howdy Smythe! 👋
 
 Welcome to your very own Security Review Framework. :tada:
 
