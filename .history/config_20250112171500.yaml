@@ -1,10 +1,7 @@
 baseURL: "https://security-sleuth-smythe.netlify.app/"
 title: "Security Review Framework"
+paginate: 5
 theme: PaperMod
-
-# Replace deprecated 'paginate' with new 'pagination' structure
-pagination:
-  pagerSize: 5
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -58,7 +55,7 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/octokas/security-review-train"
+      url: "https://github.com/yourusername/security-review-framework"
 
   cover:
     hidden: false

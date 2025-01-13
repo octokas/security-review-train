@@ -58,7 +58,7 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/octokas/security-review-train"
+      url: "https://github.com/ocotkas/security-review-framework"
 
   cover:
     hidden: false
