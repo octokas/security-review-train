@@ -1,0 +1,140 @@
+{{ $summary := .Get "summary" | default "Details" }}
+{{ $type := .Get "type" | default "default" }}
+{{ $open := .Get "open" | default "false" }}
+{{ $icon := .Get "icon" | default "" }}
+
+<details class="custom-details details-{{ $type }}" {{ if eq $open "true" }}open{{ end }}>
+    <summary class="details-summary">
+        {{ if $icon }}<span class="details-icon">{{ $icon }}</span>{{ end }}
+        <span class="details-title">{{ $summary }}</span>
+        <span class="details-arrow">▾</span>
+    </summary>
+    <div class="details-content">
+        {{ .Inner | markdownify }}
+    </div>
+</details>
+
+<style>
+.custom-details {
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--entry);
+    overflow: hidden;
+}
+
+.details-summary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.details-summary:hover {
+    background: var(--entry);
+}
+
+.details-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.details-title {
+    flex: 1;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.details-arrow {
+    font-size: 1.2em;
+    transition: transform 0.2s ease;
+}
+
+details[open] .details-arrow {
+    transform: rotate(180deg);
+}
+
+.details-content {
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+    background: var(--theme);
+}
+
+/* Types */
+.details-default {
+    border-color: var(--border);
+}
+
+.details-info {
+    border-color: #3b82f6;
+}
+
+.details-info .details-summary {
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.details-warning {
+    border-color: #f59e0b;
+}
+
+.details-warning .details-summary {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.details-error {
+    border-color: #ef4444;
+}
+
+.details-error .details-summary {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.details-success {
+    border-color: #10b981;
+}
+
+.details-success .details-summary {
+    background: rgba(16, 185, 129, 0.1);
+}
+
+/* Animation */
+.details-content {
+    animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .details-summary:hover {
+    background: var(--entry);
+}
+
+[data-theme="dark"] .details-content {
+    background: var(--theme);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .details-summary {
+        padding: 0.75rem;
+    }
+    
+    .details-content {
+        padding: 0.75rem;
+    }
+}
+</style>
