@@ -1,0 +1,89 @@
+{{ $title := .Get "title" }}
+{{ $value := .Get "value" }}
+{{ $trend := .Get "trend" | default "neutral" }}
+{{ $description := .Get "description" }}
+
+<div class="metric-card">
+    <div class="metric-card-header">
+        <h3 class="metric-title">{{ $title }}</h3>
+        <span class="trend-indicator trend-{{ $trend }}">
+            {{ if eq $trend "up" }}↑{{ end }}
+            {{ if eq $trend "down" }}↓{{ end }}
+            {{ if eq $trend "neutral" }}→{{ end }}
+        </span>
+    </div>
+    <div class="metric-value">{{ $value }}</div>
+    <p class="metric-description">{{ $description }}</p>
+</div>
+
+<style>
+.metric-card {
+    background: var(--entry);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.metric-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.metric-title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.trend-indicator {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.trend-up {
+    color: #10B981;
+}
+
+.trend-down {
+    color: #EF4444;
+}
+
+.trend-neutral {
+    color: #6B7280;
+}
+
+.metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.metric-description {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--secondary);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .metric-card {
+    background: var(--entry);
+}
+
+[data-theme="dark"] .metric-value {
+    color: var(--primary);
+}
+
+[data-theme="dark"] .metric-description {
+    color: var(--secondary);
+}
+</style>
