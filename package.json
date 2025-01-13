@@ -20,6 +20,7 @@
   "dependencies": {
     "@netlify/plugin-lighthouse": "6.0.1",
     "autoprefixer": "^10.4.16",
+    "node": "^22.13.0",
     "postcss": "^8.4.31",
     "postcss-cli": "11.0.0"
   },
