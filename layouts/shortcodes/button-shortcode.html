@@ -1,0 +1,122 @@
+{{ $href := .Get "href" }}
+{{ $type := .Get "type" | default "primary" }}
+{{ $size := .Get "size" | default "medium" }}
+{{ $target := .Get "target" | default "_self" }}
+{{ $icon := .Get "icon" | default "" }}
+
+<a href="{{ $href }}" 
+   class="custom-button button-{{ $type }} button-{{ $size }}"
+   target="{{ $target }}"
+   rel="{{ if eq $target "_blank" }}noopener noreferrer{{ end }}">
+    {{ if $icon }}
+    <span class="button-icon">{{ $icon }}</span>
+    {{ end }}
+    <span class="button-text">{{ .Inner }}</span>
+</a>
+
+<style>
+.custom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+/* Types */
+.button-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.button-primary:hover {
+    background: var(--primary-darker);
+    transform: translateY(-1px);
+}
+
+.button-secondary {
+    background: var(--entry);
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.button-secondary:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.button-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.button-outline:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.button-ghost {
+    background: transparent;
+    color: var(--primary);
+}
+
+.button-ghost:hover {
+    background: var(--entry);
+    transform: translateY(-1px);
+}
+
+/* Sizes */
+.button-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.button-medium {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.button-large {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+/* Icon styles */
+.button-icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .button-secondary {
+    background: var(--entry);
+}
+
+[data-theme="dark"] .button-ghost:hover {
+    background: var(--entry);
+}
+
+/* Additional states */
+.custom-button:active {
+    transform: translateY(1px);
+}
+
+.custom-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
+}
+
+/* Disabled state */
+.custom-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+</style>
